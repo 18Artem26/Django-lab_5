@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+    background-image: url('../img/bg.jpg'); /* Фонове зображення */
+    background-repeat: no-repeat;
+    background-size: cover; /* Зробити фонове зображення на весь екран */
+    font-family: 'Ubuntu', sans-serif;
+    color: #333; /* Колір тексту */
+    margin: 0; /* Вимкнення відступів за замовчуванням */
+}
+
+.container {
+    max-width: 800px; /* Максимальна ширина контенту */
+    margin: auto; /* Центрування контейнера */
+    padding: 20px; /* Внутрішні відступи */
+    background-color: rgba(255, 255, 255, 0.8); /* Напівпрозорий фон для контенту */
+    border-radius: 8px; /* Кути */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тінь */
+}
+
+h1, h2, h3, h4 {
+    margin: 10px 0; /* Відступи для заголовків */
+}
+
+.article-block {
+    background: #fff; /* Фон статей */
+    padding: 15px; /* Внутрішні відступи для статей */
+    margin: 15px 0; /* Зовнішні відступи для статей */
+    border-radius: 5px; /* Кути статей */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тінь статей */
+}
+
+.article-block a {
+    text-decoration: none; /* Вимкнення підкреслення */
+    color: #007bff; /* Колір посилань */
+}
+
+.article-block a:hover {
+    text-decoration: underline; /* Підкреслення при наведенні */
+}
+
+.breadcrumb {
+    background-color: rgba(255, 255, 255, 0.8); /* Напівпрозорий фон для навігаційної панелі */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.container-image {
+    text-align: center; /* Вирівнювання зображень по центру */
+}
+
+.container-image img {
+    max-width: 100%; /* Ширина зображення не більше 100% */
+    height: auto; /* Автоматичне збереження пропорцій */
+}

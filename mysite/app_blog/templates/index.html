@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+    <h1>Персональний блог</h1>
+    <p>Вітаю на моєму сайті✌😜</p>
+    
+
+    <h2>Категорії</h2>
+    {% if categories %}
+        {% for item in categories %}
+            <div>
+                <a href="{{ item.get_absolute_url }}">
+                    <h4>{{ item.category }}</h4>
+                </a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Категорій немає.</p>
+    {% endif %}
+
+    <h2>Публікації</h2>
+    {% if articles %}
+        {% for item in articles %}
+            <div class="article-block">
+                <a href="{{ item.get_absolute_url }}">
+                    <h4>{{ item.title }}</h4>
+                </a>
+                <h5>{{ item.pub_date|date:"j E Y"|safe|linebreaks }}</h5>
+                <p>{{ item.description|safe|escape|striptags|truncatewords_html:32 }}</p>
+                <img src="https://miro.medium.com/v2/resize:fit:1400/1*Bd5dYeGhFGhYuqJUpHjrNA.png" alt="Article Image" width="500" height="auto">
+
+
+
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Публікацій немає.</p>
+    {% endif %}
+{% endblock %}
